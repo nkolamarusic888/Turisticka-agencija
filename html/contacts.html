@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<title>Fast Travel | Rezervacija putovanja</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/forma.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <input type="checkbox" id="active">
+  <label for="active" class="menu-btn"><span></span></label>
+  <label for="active" class="close"></label>
+  <nav class="wrapper">
+    <ul>
+      <li><a href="../index.html">Početna</a></li>
+      <li><a href="../html/gallery.html">Popularne destinacije</a></li>
+      <li><a href="../html/contacts.html">Rezerviši letovanje</a></li>
+    </ul>
+  </nav>   
+</header>
+
+<!-- Forma -->
+<section class="sekcija">
+  <div class="forma">
+    <h2>Rezervacija letovanja</h2>
+    <form id="forma" novalidate>
+
+      <!-- Ime i prezime -->
+      <div class="input-group">
+        <input type="text" id="ime" name="ime" placeholder=" " >
+        <label>Ime i prezime</label>
+        <div class="error" id="imeError"></div>
+      </div>
+
+      <!-- Email adresa -->
+      <div class="input-group">
+        <input type="email" id="email" name="email" placeholder=" " required>
+        <label>Email</label>
+        <div class="error" id="emailError"></div>
+      </div>
+
+      <!-- Destinacija putovanja -->
+      <div class="input-group">
+        <select id="destinacija" name="destinacija" required>
+          <option id="nesto" value=""></option>
+          <option value="grcka">Grčka</option>
+          <option value="turska">Turska</option>
+          <option value="spanija">Španija</option>
+          <option value="maldivi">Maldivi</option>
+        </select>
+        <label>Destinacija</label>
+        <div class="error" id="destError"></div>
+      </div>
+
+      <!-- Datum putovanja -->
+      <div class="input-group">
+        <input type="date" id="datum" name="datum" placeholder=" " required>
+        <label>Datum</label>
+        <div class="error" id="datumError"></div>
+      </div>
+
+      <!-- Tip smeštaja -->
+      <div class="radio-group">
+        <label class="radio-title">Tip smeštaja</label>
+        <div class="radio-options">
+          <label class="radio-btn">
+            <input type="radio" name="smestaj" value="hotel">
+            <span>Hotel</span>
+          </label>
+          <label class="radio-btn">
+            <input type="radio" name="smestaj" value="apartman">
+            <span>Apartman</span>
+          </label>
+          <label class="radio-btn">
+            <input type="radio" name="smestaj" value="resort">
+            <span>Resort</span>
+          </label>
+        </div>
+        <div class="error" id="smestajError"></div>
+      </div>
+
+      <!-- Broj osoba -->
+      <div class="input-group">
+        <input type="number" id="osobe" name="osobe" min="1" placeholder=" " required>
+        <label>Broj osoba</label>
+        <div class="error" id="osobeError"></div>
+      </div>
+
+      <button type="submit">Rezerviši</button>
+
+    </form>
+  </div>
+</section>
+
+<!-- Popup prozor za potvrdu -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <h3>✔ Uspešna rezervacija</h3>
+    <p>Vaša rezervacija je uspešno poslata.</p>
+    <button onclick="zatvoriPopup()">U redu</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+
+<div class="footer-container">
+
+  <div class="footer-about">
+    <h3>Fast Travel</h3>
+    <p>Turistička agencija za nezaboravna putovanja i avanture širom sveta.</p>
+  </div>
+
+  <div class="footer-links">
+    <h3>Linkovi</h3>
+    <ul>
+      <li><a href="../index.html">Početna</a></li>
+      <li><a href="gallery.html">Destinacije</a></li>
+      <li><a href="contacts.html">Rezervacije</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<p class="copyright">
+© 2026 Fast Travel | Sva prava zadržana
+</p>
+
+</footer>
+
+<script src="../js/forma.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fast Travel | Destinacija</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/destinacija.css">
+</head>
+
+<body>
+<!-- Header -->
+<header>
+  <input type="checkbox" id="active">
+  <label for="active" class="menu-btn"><span></span></label>
+  <label for="active" class="close"></label>
+  <nav class="wrapper">
+    <ul>
+      <li><a href="../index.html">Početna</a></li>
+      <li><a href="../html/gallery.html">Popularne destinacije</a></li>
+      <li><a href="../html/contacts.html">Rezerviši letovanje</a></li>
+    </ul>
+  </nav>   
+</header>
+
+<!-- Sekcija sa osnovnim informacijama o destinaciji -->
+<div class="destinacije">
+  <h1 id="dest-title">Destinacija</h1>
+  <p id="dest-description"></p> 
+</div>
+
+<!-- Sekcija sa dodatnim informacijama o destinaciji -->
+<section class="info-container" id="dest-info"></section>
+
+<!-- Galerija destinacije -->
+<section class="gallery-container" id="dest-gallery"></section>
+
+<!-- MODAL za pregled slika iz galerije -->
+<div id="modal" class="modal">
+  <span class="modal-close">&times;</span>
+  <div class="modal-content">
+    <img id="modal-img">
+    <div id="modal-caption" class="modal-caption"></div>
+
+    <!-- Navigacija između slika -->
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <h3>Fast Travel</h3>
+      <p>Turistička agencija za nezaboravna putovanja i avanture širom sveta.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Linkovi</h3>
+      <ul>
+        <li><a href="../index.html">Početna</a></li>
+        <li><a href="gallery.html">Destinacije</a></li>
+        <li><a href="contacts.html">Rezervacije</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p class="copyright">
+    © 2026 Fast Travel | Sva prava zadržana
+  </p>
+
+</footer>
+
+<script src="../js/destinacija.js"></script>
+
+</body>
+</html>
